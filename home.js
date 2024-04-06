@@ -30,8 +30,8 @@
     const options = {
 
         enableHighAccuracy: true,
-        timeout: 50000,
-        maximumAge: 50000,
+        timeout: 5000,
+        maximumAge: 5000,
     };
     
     
@@ -70,7 +70,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     circle = L.circle([lat, lng],{ radius: accuracy }).addTo(map);
     
     if(!zoomed){
-    zoomed = map.fitbounds(circle.getBounds());
+    zoomed = map.fitBounds(circle.getBounds());
     }
    map.setView([lat, lng]);
 
